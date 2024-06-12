@@ -1,0 +1,177 @@
+.show_img {
+    width: 1700px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 400px 100px;
+    gap: 10px;
+}
+
+.camera ,.origin, .prepro{
+    background: lightgray;
+    font-size: 40px;
+    border: 1px solid #dee3eb;
+    text-align: center;
+    width: 100%; /* 카메라 이미지를 전체 너비로 설정 */
+    height: 400px; /* 카메라 이미지의 높이를 설정 */
+    overflow: hidden; /* 넘치는 부분을 숨김 */
+}
+.camera img {  
+    width: 100%; /* 이미지의 너비를 100%로 설정 */
+    height: 100%; /* 이미지의 높이를 100%로 설정 */
+    object-fit: cover; /* 이미지를 비율을 유지하면서 채움 */
+}
+
+.btn {
+    /* background: yellow; */
+    font-size: 14px;
+    /* border: 1px solid #dee3eb; */
+    text-align: center;
+}
+
+
+.btn button{
+    margin: 10%;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 5px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
+
+.btn button:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn button:focus {
+    outline: none;
+}
+
+.show_result ul img{
+    width: 350px;
+    height: 250px;
+    object-fit: contain;
+}
+
+.title h1{
+    margin: 3%;
+    text-align: center;
+    position: relative;
+    padding: 0;
+    /* margin: 0; */
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+    /* font-size: 40px; */
+    color: #080808;
+    -webkit-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    letter-spacing: 1px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: 20px 0;
+    grid-gap: 22px;
+}
+
+.title h1:after, h1:before{
+    content: " ";
+    display: block;
+    border-bottom: 2px solid #ccc;
+}
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: auto;
+}
+.image-modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.image-modal-content img {
+    width: 100%;
+    height: auto;
+}
+.close-btn {
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+/* 모달 스타일 */
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 999; /* 다른 요소 위에 표시되도록 설정 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* 반투명한 배경색 */
+    overflow: auto; /* 화면 크기가 모달보다 작을 때 스크롤 허용 */
+}
+
+/* 모달 내용 스타일 */
+.image-modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 모달 닫기 버튼 스타일 */
+.close-btn {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #ccc; /* 마우스 호버 시 색상 변경 */
+}
